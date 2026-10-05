@@ -1,0 +1,29 @@
+.header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 28px var(--page-gutter) 0; transition: padding .35s; }
+.nav { display: flex; align-items: center; gap: 36px; min-height: 60px; border: 1px solid transparent; border-radius: 12px; transition: background .35s, box-shadow .35s, padding .35s; }
+.logo { width: 182px; min-width: 130px; display: inline-flex; align-items: center; margin-right: auto; }
+.logoFrame { position: relative; width: 70px; height: 66px; overflow: hidden; display: block; }
+.logoImage { position: absolute; left: 50%; top: 50%; width: 420px; max-width: none; height: auto; transform: translate(-50%, -50%); }
+.logoPending { display: flex; height: 42px; align-items: center; padding: 0 14px; border: 1px dashed #aec0c8; border-radius: 4px; font-size: .7rem; letter-spacing: .02em; color: #687c85; background: #ffffffa6; }
+.links, .actions { display: flex; align-items: center; gap: 28px; }
+.links a, .links button, .track { font-size: .875rem; font-weight: 600; white-space: nowrap; }
+.links button { background: none; border: 0; padding: 12px 0; }
+.links a, .track { padding: 12px 0; }
+.links a:hover, .links button:hover, .track:hover { color: #006c93; }
+.actions { gap: 23px; }
+.actions .track { padding-left: 26px; border-left: 1px solid #a3b9c477; }
+.actions > a:last-child { min-height: 45px; padding: 0 23px; }
+.floating { padding-top: 14px; }
+.floating .nav { padding: 10px 20px; background: #fffffff2; backdrop-filter: blur(18px); border-color: #e9eef0; box-shadow: 0 8px 35px #163b4910; }
+.menuButton { display: none; border: 0; background: transparent; width: 44px; height: 44px; align-items: center; justify-content: center; }
+.mobileMenu { display: flex; flex-direction: column; gap: 4px; padding: 16px 22px; margin-top: 10px; background: white; border: 1px solid #e3e9eb; box-shadow: 0 12px 35px #102b3612; border-radius: 10px; }
+.mobileMenu a, .mobileMenu button { padding: 12px 0; font-size: 1rem; text-align: left; background: none; border: 0; }
+@media (min-width: 901px) { .mobileMenu { display: none; } }
+.dialog { max-width: 510px; width: calc(100% - 40px); padding: 48px; border: 1px solid #dbe4e8; border-radius: 14px; color: var(--ink); }
+.dialog::backdrop { background: #102b3670; backdrop-filter: blur(7px); }
+.dialog h2 { font-size: 2.1rem; line-height: 1.2; letter-spacing: -.05em; }
+.dialog > p:not(.eyebrow) { font-size: 1rem; line-height: 1.75; color: var(--muted); margin-bottom: 30px; }
+.dialogIcon { color: #0086b7; }
+.close { position: absolute; right: 12px; top: 12px; background: #f4f7f8; border: 0; border-radius: 50%; display: grid; place-items: center; width: 40px; height: 40px; }
+@media (max-width: 1200px) { .nav { gap: 24px; } .links { gap: 20px; } .track { display: none; } .logo { width: 150px; } }
+@media (max-width: 900px) { .links { display: none; } .menuButton { display: flex; } .actions { margin-left: auto; } .logo { margin-right: 0; } }
+@media (max-width: 767px) { .header { padding: 18px 20px 0; } .nav { min-height: 48px; gap: 10px; } .logo { width: 145px; min-width: 54px; } .logoPending { font-size: .6rem; height: 36px; padding: 0 10px; } .logoFrame { width: 54px; height: 50px; } .logoImage { width: 330px; } .actions > a:last-child { min-height: 40px; padding: 0 17px; font-size: .75rem; } .floating { padding-top: 9px; } .floating .nav { padding: 8px 10px; } .dialog { padding: 36px 28px; } }
